@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Blog Name</title>
+		<title>Halil ARI</title>
 		<description>Software Developer</description>
-		<link>http://localhost:4000/jekyll-clean-dark</link>
-		<atom:link href="http://localhost:4000/jekyll-clean-dark/feed.xml" rel="self" type="application/rss+xml" />
+		<link>http://localhost:4000</link>
+		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>Linux Komutlari</title>
 				<description>&lt;p&gt;chmod = dosya ve dizinlere gerekli izinleri vermemizi saglar.&lt;/p&gt;
 </description>
 				<pubDate>Tue, 11 Apr 2017 00:00:00 +0300</pubDate>
-				<link>http://localhost:4000/jekyll-clean-dark/2017/04/Linux-Komutlari</link>
-				<guid isPermaLink="true">http://localhost:4000/jekyll-clean-dark/2017/04/Linux-Komutlari</guid>
+				<link>http://localhost:4000/2017/04/Linux-Komutlari</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/04/Linux-Komutlari</guid>
 			</item>
 		
 			<item>
@@ -39,17 +39,17 @@ description: Here I want to introduce you the dark theme for Jekyll.&lt;br /&gt;
 
 &lt;p&gt;Here how it looks like on some portable devices:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/jekyll-clean-dark/images/iphone_portrait.PNG&quot; alt=&quot;My helpful screenshot&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;iPhone 5 portrait&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/iphone_portrait.PNG&quot; alt=&quot;My helpful screenshot&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;iPhone 5 portrait&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/jekyll-clean-dark/images/iphone_landscape.PNG&quot; alt=&quot;My helpful screenshot&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;iPhone 5 landscape&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/iphone_landscape.PNG&quot; alt=&quot;My helpful screenshot&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;iPhone 5 landscape&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/jekyll-clean-dark/images/ipad_portrait.PNG&quot; alt=&quot;My helpful screenshot&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;iPad mini portrait&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/ipad_portrait.PNG&quot; alt=&quot;My helpful screenshot&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;iPad mini portrait&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/jekyll-clean-dark/images/ipad_landscape.PNG&quot; alt=&quot;My helpful screenshot&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;iPad mini landscape&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/ipad_landscape.PNG&quot; alt=&quot;My helpful screenshot&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;iPad mini landscape&lt;/em&gt;&lt;/p&gt;
 </description>
 				<pubDate>Thu, 01 Dec 2016 00:00:00 +0300</pubDate>
-				<link>http://localhost:4000/jekyll-clean-dark/2016/12/jekyll-clean-theme</link>
-				<guid isPermaLink="true">http://localhost:4000/jekyll-clean-dark/2016/12/jekyll-clean-theme</guid>
+				<link>http://localhost:4000/2016/12/jekyll-clean-theme</link>
+				<guid isPermaLink="true">http://localhost:4000/2016/12/jekyll-clean-theme</guid>
 			</item>
 		
 			<item>
@@ -116,8 +116,8 @@ description: Here I want to introduce you the dark theme for Jekyll.&lt;br /&gt;
 &lt;code class=&quot;key highlighter-rouge&quot;&gt;Ctrl&lt;/code&gt; + &lt;code class=&quot;key highlighter-rouge&quot;&gt;R&lt;/code&gt; = finds the last command matching the entered letters.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 02 Nov 2016 19:25:06 +0300</pubDate>
-				<link>http://localhost:4000/jekyll-clean-dark/2016/11/text-formatting</link>
-				<guid isPermaLink="true">http://localhost:4000/jekyll-clean-dark/2016/11/text-formatting</guid>
+				<link>http://localhost:4000/2016/11/text-formatting</link>
+				<guid isPermaLink="true">http://localhost:4000/2016/11/text-formatting</guid>
 			</item>
 		
 			<item>
@@ -195,8 +195,8 @@ description: Here I want to introduce you the dark theme for Jekyll.&lt;br /&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 </description>
 				<pubDate>Sat, 01 Oct 2016 19:25:06 +0300</pubDate>
-				<link>http://localhost:4000/jekyll-clean-dark/2016/10/code-syntax-highlighting</link>
-				<guid isPermaLink="true">http://localhost:4000/jekyll-clean-dark/2016/10/code-syntax-highlighting</guid>
+				<link>http://localhost:4000/2016/10/code-syntax-highlighting</link>
+				<guid isPermaLink="true">http://localhost:4000/2016/10/code-syntax-highlighting</guid>
 			</item>
 		
 			<item>
@@ -255,8 +255,8 @@ description: Here I want to introduce you the dark theme for Jekyll.&lt;br /&gt;
 &lt;span class=&quot;nv&quot;&gt;$warning-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#ffff00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 </description>
 				<pubDate>Tue, 20 Sep 2016 19:25:06 +0300</pubDate>
-				<link>http://localhost:4000/jekyll-clean-dark/2016/09/customizations</link>
-				<guid isPermaLink="true">http://localhost:4000/jekyll-clean-dark/2016/09/customizations</guid>
+				<link>http://localhost:4000/2016/09/customizations</link>
+				<guid isPermaLink="true">http://localhost:4000/2016/09/customizations</guid>
 			</item>
 		
 			<item>
@@ -268,7 +268,7 @@ Out-of-the box it has:&lt;/p&gt;
 
 &lt;ul class=&quot;social-media&quot;&gt;
   &lt;li&gt;
-    &lt;a title=&quot;Github&quot; href=&quot;https://github.com/streetturtle&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-github fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a title=&quot;Github&quot; href=&quot;https://github.com/halilari&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-github fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;a title=&quot;StackOverflow&quot; href=&quot;http://stackoverflow.com/users/1252056/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-stack-overflow fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
@@ -339,8 +339,8 @@ To turn them on in the header of your post add:&lt;/p&gt;
 &lt;/ol&gt;
 </description>
 				<pubDate>Thu, 15 Sep 2016 19:25:06 +0300</pubDate>
-				<link>http://localhost:4000/jekyll-clean-dark/2016/09/be-social</link>
-				<guid isPermaLink="true">http://localhost:4000/jekyll-clean-dark/2016/09/be-social</guid>
+				<link>http://localhost:4000/2016/09/be-social</link>
+				<guid isPermaLink="true">http://localhost:4000/2016/09/be-social</guid>
 			</item>
 		
 			<item>
@@ -372,8 +372,8 @@ To turn them on in the header of your post add:&lt;/p&gt;
 &lt;p&gt;To enable &lt;a href=&quot;http://disqus.com&quot;&gt;Disqus&lt;/a&gt; register on the site and then just put your name in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.xml&lt;/code&gt;. Comments could be switched on and off on per post basis, just put &lt;code class=&quot;highlighter-rouge&quot;&gt;comments: true&lt;/code&gt; to enable them.&lt;/p&gt;
 </description>
 				<pubDate>Mon, 01 Aug 2016 19:25:06 +0300</pubDate>
-				<link>http://localhost:4000/jekyll-clean-dark/2016/08/analytics-tags-comments</link>
-				<guid isPermaLink="true">http://localhost:4000/jekyll-clean-dark/2016/08/analytics-tags-comments</guid>
+				<link>http://localhost:4000/2016/08/analytics-tags-comments</link>
+				<guid isPermaLink="true">http://localhost:4000/2016/08/analytics-tags-comments</guid>
 			</item>
 		
 			<item>
@@ -383,7 +383,7 @@ To turn them on in the header of your post add:&lt;/p&gt;
 &lt;p&gt;This theme supports two types of images:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;inline images: &lt;img src=&quot;http://localhost:4000/jekyll-clean-dark/images/batWid1.png&quot; alt=&quot;Battery Widget&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;inline images: &lt;img src=&quot;http://localhost:4000/images/batWid1.png&quot; alt=&quot;Battery Widget&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;![Battery Widget]({{ site.url | append:site.baseurl }}/images/batWid1.png)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -392,7 +392,7 @@ To turn them on in the header of your post add:&lt;/p&gt;
   &lt;li&gt;centered images with caption (optional):&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/jekyll-clean-dark/images/deer.jpg&quot; alt=&quot;img&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;(°0°)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/deer.jpg&quot; alt=&quot;img&quot; class=&quot;center-image&quot; /&gt;&lt;em&gt;(°0°)&lt;/em&gt;&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;![img]({{ site.baseurl | prepend:site.url}}/images/deer.jpg){: .center-image }*(°0°)*&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -410,8 +410,8 @@ To turn them on in the header of your post add:&lt;/p&gt;
 
 </description>
 				<pubDate>Fri, 01 Jul 2016 19:25:06 +0300</pubDate>
-				<link>http://localhost:4000/jekyll-clean-dark/2016/07/images</link>
-				<guid isPermaLink="true">http://localhost:4000/jekyll-clean-dark/2016/07/images</guid>
+				<link>http://localhost:4000/2016/07/images</link>
+				<guid isPermaLink="true">http://localhost:4000/2016/07/images</guid>
 			</item>
 		
 			<item>
@@ -447,8 +447,8 @@ respective owners:&lt;/p&gt;
 &lt;/ul&gt;
 </description>
 				<pubDate>Sun, 01 Nov 2015 19:25:06 +0300</pubDate>
-				<link>http://localhost:4000/jekyll-clean-dark/2015/11/installation</link>
-				<guid isPermaLink="true">http://localhost:4000/jekyll-clean-dark/2015/11/installation</guid>
+				<link>http://localhost:4000/2015/11/installation</link>
+				<guid isPermaLink="true">http://localhost:4000/2015/11/installation</guid>
 			</item>
 		
 	</channel>
