@@ -7,102 +7,29 @@
 		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Mr. Robot VM Cozumu</title>
-				<description>&lt;p&gt;Zaafiyetli makineyi indirmek için vulnhub.com/mrrobot&lt;br /&gt;
-&lt;img src=&quot;/images/ava.jpg&quot; alt=&quot;ava&quot; /&gt;&lt;/p&gt;
+				<title>Troll Vulnhub Writeup</title>
+				<description>&lt;h1 id=&quot;troll-vulnhub&quot;&gt;Troll Vulnhub&lt;/h1&gt;
 
-&lt;blockquote class=&quot;filename&quot;&gt;
-  &lt;p&gt;_config.yml&lt;/p&gt;
+&lt;p&gt;Bu yazı da sizlere Troll isimli zaafiyetli makinenin çözümünü anlatacağım.Öncelikle makineyi indirmek için;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.vulnhub.com/entry/tr0ll-1,100/&quot;&gt;https://www.vulnhub.com/entry/tr0ll-1,100/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;share&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;facebook&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;twitter&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;gplus&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;linkedin&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;pinterest&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Makineyi sanal ortamda kurulumunu tamamlandıktan sonra&lt;/p&gt;
 
-&lt;h1 id=&quot;social-icons&quot;&gt;Social icons&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ netdiscover ya da netdiscover -r 192.168.1.0/24
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;You can have social icons which could lead to your social profile.&lt;br /&gt;
-Out-of-the box it has:&lt;/p&gt;
+&lt;p&gt;diyerekten makinenin ıp adresini buluyoruz.Bende 192.168.1.41 olarak gözüküyor.Ip adresini de bulduğumuza göre bir nmap taraması atıp yolumuzu buluyoruz.&lt;/p&gt;
 
-&lt;ul class=&quot;social-media&quot;&gt;
-  &lt;li&gt;
-    &lt;a title=&quot;Github&quot; href=&quot;https://github.com/halilari&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-github fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;a title=&quot;StackOverflow&quot; href=&quot;http://stackoverflow.com/users/1252056/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-stack-overflow fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;a title=&quot;LinkedIn&quot; href=&quot;https://www.linkedin.com/in/halilari&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-linkedin fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;a title=&quot;Instagram&quot; href=&quot;https://instagram.com/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-instagram fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;a title=&quot;Last.fm&quot; href=&quot;http://lastfm.com/user/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-lastfm fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;a title=&quot;RSS&quot; href=&quot;http://localhost:4000/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-rss fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/images/nmap.png&quot; alt=&quot;nmap&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;They could be setup in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;To add more icons do following steps:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;choose an icon you want to use: &lt;a href=&quot;https://fortawesome.github.io/Font-Awesome/icons/&quot;&gt;Font Awesome Icons&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;add variable in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;add icon in &lt;code class=&quot;highlighter-rouge&quot;&gt;social.html&lt;/code&gt; with check if variable exists:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;{% if site.social.rss %}
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.social.&amp;lt;your_social_variable&amp;gt; }}&quot;&lt;/span&gt; 
-       &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{site.url}}/{{ site.social.&amp;lt;your_social_variable&amp;gt; }}&quot;&lt;/span&gt; 
-       &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_blank&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;font&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_awesome_icon&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-{% endif %}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h1 id=&quot;share-buttons&quot;&gt;Share buttons&lt;/h1&gt;
-
-&lt;p&gt;This theme comes with built-in share buttons. You can see them in the bottom of this post.&lt;br /&gt;
-To turn them on in the header of your post add:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Be&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;sociable&quot;&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;2016-05-15 16:25:06&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Built-in share buttons!&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;share&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true &amp;lt;-- here&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;If you want to disable some of them - go to &lt;strong&gt;_config.yml&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;blockquote class=&quot;filename&quot;&gt;
-  &lt;p&gt;_config.yml&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;s&quot;&gt;share&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;facebook&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;twitter&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;gplus&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;linkedin&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;pinterest&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;To add new buttons:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;add icon name in &lt;strong&gt;_config.yml&lt;/strong&gt;;&lt;/li&gt;
-  &lt;li&gt;add section in &lt;strong&gt;_includes/share.html&lt;/strong&gt;;&lt;/li&gt;
-  &lt;li&gt;add styles in &lt;strong&gt;css/theme.css&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
 </description>
 				<pubDate>Tue, 11 Apr 2017 00:00:00 +0300</pubDate>
-				<link>http://localhost:4000/2017/04/Mr.RobotVmCozumu</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/04/Mr.RobotVmCozumu</guid>
+				<link>http://localhost:4000/2017/04/TrollVulnhubWriteup</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/04/TrollVulnhubWriteup</guid>
 			</item>
 		
 	</channel>
