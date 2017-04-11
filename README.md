@@ -1,228 +1,52 @@
-# console-theme
+Jekyll Clean Dark
+============
 
-[![Gem Version](https://badge.fury.io/rb/console-theme.svg)](https://badge.fury.io/rb/console-theme)
+[![Gem Version](https://badge.fury.io/rb/jekyll-clean-dark.svg)](https://badge.fury.io/rb/jekyll-clean-dark)
 
-For a demo, please [click here](http://jaehee0113.github.io/console).
+This theme was created on top of Jekyll Clean theme by Scotte, you can view the original version in action [on his blog](https://scotte.github.io).
 
-![alt tag](http://jaehee0113.github.io/console/screenshot.png)
+* Get it from [github](https://github.com/streetturtle/jekyll-clean-dark).
+* See the [live demo](http://pavelmakhov.com/jekyll-clean-dark).
+* See it [in action on my own blog](http://pavelmakhov.com).
 
-This is a simple yet powerful theme that will make your website look really stylish. This theme is especially suitable for users who would want to focus on writing blogs instead of working on front-end stuffs.
+This theme uses some parts of Twitter Bootstrap, which allows it to look nice on a mobile devices using a collapsable nav bar and hiding the
+sidebar.
 
-The primary features of this theme are:
-* Gulp
-* Post search functionality
-* svg symbol functionality (plugin)
-* string original type check functionality (plugin)
-* Rake to create a post
-* Disqus integration (with each post having its unique identifier)
-* Color customization functionality
-* Categorization (data-driven)
-* Offcanvas menu
-* Pagination functionality (utilises jekyll-paginate as well as jquery paginator)
-* Internationalization (uses jekyll-polyglot)
-* SEO (uses jekyll-seo-tag)
+Optionally you can use:
 
-There are more features to come. Stay tuned!
+ - [Disqus](http://disqus.com) as a comments system;
+ - [Google Analytics](http://www.google.com/analytics/);
+ - [Yandex Metrica](http://metrica.yandex.com);
+ - Blog tags;
+ - Share buttons.
 
-# Table of Contents
+All these features could be set up in `_config.yml`. Also you can have social icons which could lead to your social profiles. It uses [font-awesome](http://fontawesome.io/), so you can have any icon you want to any social profile. Out-of-the box it has: LinkedIn, GitHub, StackOverflow, LastFm, Instagram. And you can easily add more by adding new style in `theme.css` and setting it in `_config.yml`.
 
-* [Installation](#installation)
-  * [Gulp Settings](#gulp-settings)
-  * [Using a BrowserSync instead of Jekyll generated local server](#why-browsersync)
-* [Usage](#usage)
-  * [Creating a post](#create-post)
-  * [Integrating Disqus with your website](#integrate-disqus)
-  * [Using svg symbol](#use-svg-symbol)
-  * [Adding more languages](#add-languages)
-* [Categorization](#categorization)
-* [Layouts and Blocks](#layout-block)
-* [Stylesheets](#stylesheets)
-* [Why some pages need to use folder structure](#why-use-folder-structure)
-* [Contributing](#contributing)
-* [Development](#development)
-* [License](#license)
+Installation
+==
 
-<div id='installation'></div>
-## Installation
+If you dont't have your own blog you can clone this repository and put your articles in a `_posts` folder.
+If you already have your own blog then I think you can clone this repository and copy-paste content keeping your `_posts` folder.
 
-Add this line to your Jekyll site's Gemfile:
+After you will have to set up your `_config.yml`
 
-```ruby
-gem "console-theme"
-```
+License
+=======
 
-And add this line to your Jekyll site's `_config.yml`:
+The content of this theme is distributed and licensed under a
+[Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
 
-```yaml
-theme: console-theme
-```
+    This license lets others distribute, remix, tweak, and build upon your work,
+    even commercially, as long as they credit you for the original creation. This
+    is the most accommodating of licenses offered. Recommended for maximum
+    dissemination and use of licensed materials.
 
-And then execute:
+In other words: you can do anything you want with this theme on any site, just please
+provide a link to the original theme on github.
 
-    $ bundle
+This theme includes the following files which are the properties of their
+respective owners:
 
-Or install it yourself as:
-
-    $ gem install console-theme
-
-<div id='gulp-settings'></div>
-### Gulp settings
-
-To be able to use Gulp, you will need to install Node.js as well as its package manager (i.e. npm). Once you have installed npm. Go to the folder where the package.json is located and run `npm install` and it will install all the dependencies including Gulp.
-
-    $ npm install
-
-When running `gulp` command, it will run the default gulp task. Make sure to run the following command when you are in the folder that has `gulpfile.js`.
-
-    $ gulp
-
-This task would run several other tasks defined in `gulpfile.js.` To run individual tasks, please type `gulp [task name]`. For example:
-
-    $ gulp minify-css
-
-<div id='why-browsersync'></div>
-### Using a BrowserSync instead of Jekyll generated local server.
-
-When running Jekyll serve, it is possible to run a server. However, I chose to use BrowserSync instead of that for few reasons:
-
-* BrowserSync is a de-facto standard nowadays.
-* It is used with Gulp and Gulp provides bundling as well as minifying, which based on my knowledge is not possible with Jekyll generated server.
-
-Therefore, please do use gulp!
-
-<div id='usage'></div>
-## Usage
-
-<div id='create-post'></div>
-### Creating a post
-
-Please use `rake` command to create a post. Using this command would automatically generate Jekyll front matter with a unique Disqus identifier. The syntax for rake command is [assuming that you are in the root folder]:
-
-```ruby
-rake post title="Title" [date="2017-01-13"] [category="category"]
-```
-
-[] are optionals.
-
-<div id='integrate-disqus'></div>
-### Integrating Disqus with your website.
-
-You will need to first have Disqus account. Once the account is ready, please modify `config.yml` file by adding your shortname for disqus like below:
-
-```yaml
-disqus_shortname: [your short name. Remove the bracket!]
-```
-
-By doing this, every disqus script would use that information and disqus identifier to fetch relevant data.
-
-<div id='use-svg-symbol'></div>
-### Using svg symbol
-
-Using svg symbol is a good practice. By doing this, we can organize svgs better while not losing the caching functionality. Make sure you change your svg file to the file that conforms to the svg symbol style:
-
-```html
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="beaker" viewBox="214.7 0 182.6 792">
-    <circle cx="344.8" cy="20.2" r="20.2"/>
-    <circle cx="344.8" cy="92.9" r="20.2"/>
-    <circle cx="320.5" cy="169.7" r="24.2"/>
-    <circle cx="243" cy="141.4" r="24.2"/>
-    <circle cx="284.2" cy="56.6" r="36.4"/>
-  </symbol>
-</svg>
-```
-
-If we would like to use this, we use svgicon tag by:
-
-```liquid
-{% svgicon beaker %}
-```
-
-This would display beaker on the screen! Examples are available.
-
-This external svg file is located in: `assets/css/images/graphics/svg-symbols.svg`
-
-<div id='add-languages'></div>
-### Adding more languages
-
-This theme uses `jekyll-polyglot` plugin with the plugin I developed. I have already initiated the internationalization work. The partially translated languages are: English, German and Korean. To add languages, simply add the language acronym (e.g. German is de ('Deutsch') but really you can define your own acronym) to languages variable in `_config.yml` (e.g. `languages: ["en", "de", "ko"]`). To add more languages, you would need to do the following:
-
-1. **`localization.json`**: this is a nested json object file. The key represents the id for each translation and the value would have another key-value object with its key repesenting language acronym and the value being the translated word.
-
-2. **`search.js`**: this may later be integrated with `localization.json` file but at the moment it is separate. In this js file, you will see `populateJSON()` function. The translation json in this function will be used in search.html. To add more languages, you need to modify this function.
-
-The above files will then be used by the plugin called **Localization** (i.e. `_plugins/localize.rb`) and to use this simply:
-
-```liquid
-{% localize [key_id] %}
-```
-
-Explore the files and you will see plenty of examples. The plugin will automatically detect the language currently being used and then translate the word according to the one defined in `localization.json`.
-
-<div id='categorization'></div>
-## Categorization
-
-This theme uses data-driven categorization, which makes the construction of categoization simple and succinct. The json file for category is located in _data/categories.json. Each category has three attributes: title, href and id (used to uniquely identify them). Please view the sample file to get a sense of it.
-
-To create the category pages, you need to create a 'category' folder and subfolders would be the name of categories. They can be further nested (i.e. sub categories). Each folder would have index.md (as we will be using folder structure for creating the page for category.) You can reference my website or refer to the examples provided.
-
-<div id='layout-block'></div>
-## Layouts and Blocks
-
-This theme values simplicity. As such, every layout would look extremely analogous with each other. However, for extensibility there are about 7 layouts:
-
-* category
-* default
-* main
-* page
-* post
-* search
-* home
-
-These layouts share same blocks, which are defined in _includes folder. There are about 10 blocks:
-
-* **category**: the block that displays the available categories.
-* **comment**: the comment block, which would be visible if comment: true in the front matter for posts.
-* **footer**: the footer area.
-* **global**: the global menu area.
-* **head**: corresponds to the head tag in html.
-* **header**: the header area. This area usually shows the location of particular page.
-* **home**: corresponds the index.html
-* **navigation**: the block for the menu.
-* **not_found**: for 404 page.
-* **search**: the block for search.
-
-<div id='stylesheets'></div>
-## Stylesheets
-
-Jekyll uses sass, which is a scripting language that would be interpreted into css files. They are largely divided into three usages:
-
-* **blocks**: the rest. The files are well separated. ( I think. )
-* **configurations**: color settings and foundation styling will be here.
-* **mixins**: self-explanatory. The breakpoint would be set here for responsive web design.
-
-Based on your needs, you may modify these files.
-
-<div id='why-use-folder-structure'></div>
-## Why some pages need to use folder structure
-
-To create a page, there are few ways to achieve it. One of the solutions would be to use folder structure. For example, if we were to create a page called 'archive', then you can create the folder called 'archive' and then include index.html.  For pages that use jekyll-paginate functionality, it is mandatory to use this. Otherwise, the functionality would not work. Please do not use .md extension. Use `.html` only as it would not work if this extension is not used.
-
-<div id='contributing'></div>
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/jaehee0113/console. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-<div id='development'></div>
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
-
-<div id='license'></div>
-## License
-
-The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+* js/bootstrap.min.js - [bootstrap](http://getbootstrap.com)
+* css/bootstrap.min.css - [bootstrap](http://getbootstrap.com)
+* js/jquery.min.js - [jquery](https://jquery.com)
