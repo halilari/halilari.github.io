@@ -11,6 +11,7 @@ url: https://halilari.github.io
 baseurl: ""
 gems:
   - jekyll-paginate
+  - jekyll-sitemap
 share:
   facebook: true
   twitter: true
@@ -22,7 +23,7 @@ share:
 social:
   github: halilari
   linkedin: halilari
-  rss: feed.xml
+  twitter: HalilAri3
 
 # Google Analytics key, leave blank to ignore
 google_analytics_key:

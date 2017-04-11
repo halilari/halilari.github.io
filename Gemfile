@@ -14,3 +14,4 @@ gem "jekyll", "3.4.3"
 # Pagination for Jekyll
 gem 'jekyll-paginate'
 
+gem 'jekyll-sitemap'
