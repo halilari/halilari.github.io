@@ -3,8 +3,8 @@
 	<channel>
 		<title>Halil ARI</title>
 		<description>Software Developer</description>
-		<link>https://halilari.github.io</link>
-		<atom:link href="https://halilari.github.io/feed.xml" rel="self" type="application/rss+xml" />
+		<link>http://localhost:4000</link>
+		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>Mr. Robot VM Cozumu</title>
@@ -45,7 +45,7 @@ Out-of-the box it has:&lt;/p&gt;
     &lt;a title=&quot;Last.fm&quot; href=&quot;http://lastfm.com/user/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-lastfm fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;a title=&quot;RSS&quot; href=&quot;https://halilari.github.io/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-rss fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a title=&quot;RSS&quot; href=&quot;http://localhost:4000/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-rss fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -101,8 +101,8 @@ To turn them on in the header of your post add:&lt;/p&gt;
 &lt;/ol&gt;
 </description>
 				<pubDate>Tue, 11 Apr 2017 00:00:00 +0300</pubDate>
-				<link>https://halilari.github.io/2017/04/Mr.RobotVmCozumu</link>
-				<guid isPermaLink="true">https://halilari.github.io/2017/04/Mr.RobotVmCozumu</guid>
+				<link>http://localhost:4000/2017/04/Mr.RobotVmCozumu</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/04/Mr.RobotVmCozumu</guid>
 			</item>
 		
 			<item>
@@ -110,8 +110,8 @@ To turn them on in the header of your post add:&lt;/p&gt;
 				<description>&lt;p&gt;Zaafiyetli makineyi indirmek için vulnhub.com/mrrobot&lt;/p&gt;
 </description>
 				<pubDate>Tue, 11 Apr 2017 00:00:00 +0300</pubDate>
-				<link>https://halilari.github.io/2017/04/Mr.RobotVmCozumleri-Kopya</link>
-				<guid isPermaLink="true">https://halilari.github.io/2017/04/Mr.RobotVmCozumleri-Kopya</guid>
+				<link>http://localhost:4000/2017/04/Mr.RobotVmCozumleri-Kopya</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/04/Mr.RobotVmCozumleri-Kopya</guid>
 			</item>
 		
 			<item>
@@ -119,8 +119,8 @@ To turn them on in the header of your post add:&lt;/p&gt;
 				<description>&lt;p&gt;Zaafiyetli makineyi indirmek için vulnhub.com/mrrobot&lt;/p&gt;
 </description>
 				<pubDate>Tue, 11 Apr 2017 00:00:00 +0300</pubDate>
-				<link>https://halilari.github.io/2017/04/Mr.RobotVmCozumleri-Kopya-(5)</link>
-				<guid isPermaLink="true">https://halilari.github.io/2017/04/Mr.RobotVmCozumleri-Kopya-(5)</guid>
+				<link>http://localhost:4000/2017/04/Mr.RobotVmCozumleri-Kopya-(5)</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/04/Mr.RobotVmCozumleri-Kopya-(5)</guid>
 			</item>
 		
 			<item>
@@ -128,8 +128,8 @@ To turn them on in the header of your post add:&lt;/p&gt;
 				<description>&lt;p&gt;Zaafiyetli makineyi indirmek için vulnhub.com/mrrobot&lt;/p&gt;
 </description>
 				<pubDate>Tue, 11 Apr 2017 00:00:00 +0300</pubDate>
-				<link>https://halilari.github.io/2017/04/Mr.RobotVmCozumleri-Kopya-(4)</link>
-				<guid isPermaLink="true">https://halilari.github.io/2017/04/Mr.RobotVmCozumleri-Kopya-(4)</guid>
+				<link>http://localhost:4000/2017/04/Mr.RobotVmCozumleri-Kopya-(4)</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/04/Mr.RobotVmCozumleri-Kopya-(4)</guid>
 			</item>
 		
 			<item>
@@ -137,8 +137,8 @@ To turn them on in the header of your post add:&lt;/p&gt;
 				<description>&lt;p&gt;Zaafiyetli makineyi indirmek için vulnhub.com/mrrobot&lt;/p&gt;
 </description>
 				<pubDate>Tue, 11 Apr 2017 00:00:00 +0300</pubDate>
-				<link>https://halilari.github.io/2017/04/Mr.RobotVmCozumleri-Kopya-(3)</link>
-				<guid isPermaLink="true">https://halilari.github.io/2017/04/Mr.RobotVmCozumleri-Kopya-(3)</guid>
+				<link>http://localhost:4000/2017/04/Mr.RobotVmCozumleri-Kopya-(3)</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/04/Mr.RobotVmCozumleri-Kopya-(3)</guid>
 			</item>
 		
 			<item>
@@ -146,8 +146,8 @@ To turn them on in the header of your post add:&lt;/p&gt;
 				<description>&lt;p&gt;Zaafiyetli makineyi indirmek için vulnhub.com/mrrobot&lt;/p&gt;
 </description>
 				<pubDate>Tue, 11 Apr 2017 00:00:00 +0300</pubDate>
-				<link>https://halilari.github.io/2017/04/Mr.RobotVmCozumleri-Kopya-(2)</link>
-				<guid isPermaLink="true">https://halilari.github.io/2017/04/Mr.RobotVmCozumleri-Kopya-(2)</guid>
+				<link>http://localhost:4000/2017/04/Mr.RobotVmCozumleri-Kopya-(2)</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/04/Mr.RobotVmCozumleri-Kopya-(2)</guid>
 			</item>
 		
 			<item>
@@ -174,7 +174,7 @@ Out-of-the box it has:&lt;/p&gt;
     &lt;a title=&quot;Last.fm&quot; href=&quot;http://lastfm.com/user/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-lastfm fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;a title=&quot;RSS&quot; href=&quot;https://halilari.github.io/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-rss fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a title=&quot;RSS&quot; href=&quot;http://localhost:4000/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-rss fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -230,8 +230,8 @@ To turn them on in the header of your post add:&lt;/p&gt;
 &lt;/ol&gt;
 </description>
 				<pubDate>Thu, 15 Sep 2016 19:25:06 +0300</pubDate>
-				<link>https://halilari.github.io/2016/09/be-social</link>
-				<guid isPermaLink="true">https://halilari.github.io/2016/09/be-social</guid>
+				<link>http://localhost:4000/2016/09/be-social</link>
+				<guid isPermaLink="true">http://localhost:4000/2016/09/be-social</guid>
 			</item>
 		
 	</channel>
