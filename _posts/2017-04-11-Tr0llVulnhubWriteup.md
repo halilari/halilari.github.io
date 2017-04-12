@@ -148,7 +148,6 @@ Artık root klasörüne gidebiliriz. Burada dikkatimizi proof.txt dosyası çeki
 
 
 
-
   
 
 
