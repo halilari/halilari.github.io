@@ -51,4 +51,8 @@
 <loc>http://localhost:4000/tag/tags/index.html</loc>
 <lastmod>2017-02-27T05:51:44+03:00</lastmod>
 </url>
+<url>
+<loc>http://localhost:4000/tag/vm/index.html</loc>
+<lastmod>2017-04-12T22:12:15+03:00</lastmod>
+</url>
 </urlset>
