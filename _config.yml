@@ -31,7 +31,7 @@ google_analytics_key: UA-97208202-1
 yandex_metrica:
 
 tag_page_layout: tag_index
-tag_page_dir: tag
+tag_page_dir: site/tag
 
 # Set this to your disqus shortname to enable comments. Note that the 'comments'
 # setting below must also be true. Individual posts can override 'comments' to

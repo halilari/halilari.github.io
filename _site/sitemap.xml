@@ -5,10 +5,6 @@
 <lastmod>2017-04-11T00:00:00+03:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2017/04/MrRobotVulnhubWriteup</loc>
-<lastmod>2017-04-11T00:00:00+03:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/about</loc>
 </url>
 <url>
@@ -22,9 +18,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/tag/vm/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/tag/dm/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/tag/analytics/index.html</loc>
@@ -43,10 +36,6 @@
 <lastmod>2017-02-27T05:51:44+03:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/tag/dm/index.html</loc>
-<lastmod>2017-04-12T21:49:36+03:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/tag/images/index.html</loc>
 <lastmod>2017-02-27T05:51:44+03:00</lastmod>
 </url>
@@ -61,9 +50,5 @@
 <url>
 <loc>http://localhost:4000/tag/tags/index.html</loc>
 <lastmod>2017-02-27T05:51:44+03:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/tag/vm/index.html</loc>
-<lastmod>2017-04-12T21:52:55+03:00</lastmod>
 </url>
 </urlset>
