@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Halil ARI | Troll Vulnhub Writeup </title>
+  <title>Halil ARI | Tr0ll Vulnhub Writeup </title>
   <meta name="theme-color" content="#222222" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="/js/jquery.min.js"></script>
@@ -67,7 +67,7 @@
             <div class="col-md-8">
               <div class="article">
                 <div class="well">
-                  <h1><a href="/2017/04/TrollVulnhubWriteup">Troll Vulnhub Writeup</a></h1>
+                  <h1><a href="/2017/04/Tr0llVulnhubWriteup">Tr0ll Vulnhub Writeup</a></h1>
                   <div class="post-meta">
                     <div class="post-time">
                       <i class="fa fa-calendar"></i>
@@ -81,23 +81,77 @@
                   </div>
                   <div class="post-content">
                     <div id="toc" class="toc"></div>
-                    <h1 id="troll-vulnhub">Troll Vulnhub</h1>
+                    <h1 id="tr0ll-vulnhub">Tr0ll Vulnhub</h1>
 
-<p>Bu yazı da sizlere Troll isimli zaafiyetli makinenin çözümünü anlatacağım.Öncelikle makineyi indirmek için;</p>
+<p>Herkese merhabalar. Üniversite 1. sınıftan beri hep ertelediğim işi artık yapacağım! Yani Blog tutucam :) Elimden geldiğince faydalı olacağını düşündüğüm yazılar yazmaya çalışacağım. Umarım faydalı olur. O zaman başlayalım artık.</p>
+
+<p>Bu yazı da sizlere Tr0ll isimli zaafiyetli makinenin çözümünü anlatacağım.Öncelikle makineyi indirmek için;</p>
 
 <blockquote>
   <p><a href="https://www.vulnhub.com/entry/tr0ll-1,100/">https://www.vulnhub.com/entry/tr0ll-1,100/</a></p>
 </blockquote>
 
-<p>Makineyi sanal ortamda kurulumunu tamamlandıktan sonra</p>
+<p>Makineyi sanal ortamda kurulumunu tamamlandıktan sonra zaafiyetli makinenin ıp adresini tespit edip işe koyuluyoruz.<br />
+Benim kali makinemin ıp adresi 192.168.100.129..</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ netdiscover ya da netdiscover -r 192.168.1.0/24
+<div class="highlighter-rouge"><pre class="highlight"><code>$ netdiscover -r 192.168.100.0/24 
 </code></pre>
 </div>
 
-<p>diyerekten makinenin ıp adresini buluyoruz.Bende 192.168.1.41 olarak gözüküyor.Ip adresini de bulduğumuza göre bir nmap taraması atıp yolumuzu buluyoruz.</p>
+<p><img src="/images/tr0ll/netd.png" alt="" /></p>
+
+<p>diyerekten makinenin ıp adresini buluyoruz.Bende 192.168.100.140 olarak gözüküyor.Ip adresini de bulduğumuza göre bir nmap taraması atıp yolumuzu buluyoruz.</p>
 
 <p><img src="/images/nmap.png" alt="nmap" /></p>
+
+<p>nmap parametrelerini kısaca açıklayayım;</p>
+<blockquote>
+  <p>-sS - - - &gt; SYN Scan. SYN bayraklı paketler yollar. Varsayılan olarak kullanılır ve oldukça hızlıdır.</p>
+</blockquote>
+
+<blockquote>
+  <p>-sV - - - &gt; Hangi servisin çalışdığını bilmek yetmez versiyon bilgileride lazımdır.Çalışan servislerin versiyon bilgisini verir.</p>
+</blockquote>
+
+<blockquote>
+  <p>-A - - - &gt; Agresif tarama yapar. İşletim sistemi bilgisini , servis ve versiyon bilgilerini verir.</p>
+</blockquote>
+
+<blockquote>
+  <p>-Pn - - -&gt; Ping atmadan taramayı gerçekleştirir.</p>
+</blockquote>
+
+<blockquote>
+  <p>-p- - - - &gt; Tüm portarı tarar.</p>
+</blockquote>
+
+<p>Çıktılara bakarsak;</p>
+
+<blockquote>
+  <p>1-) ftp servisi açık ve anonymous kullanıcılarına açık.<br />
+2-) ssh servisi açık.<br />
+3-) http servisi açık ve çoğu zaman karşılaştığımız robots.txt dosyası bulunuyor.(robots.txt dosyasına arama motorları tarafından indexlenmesini istemediğimiz url leri yazarız.)Ve secret url bulunuyor.</p>
+</blockquote>
+
+<p>Öncelikle http servisinde neler bekliyor bizi bakıyoruz.</p>
+
+<p><img src="/images/tr0ll/1.png" alt="" /></p>
+
+<p>Kaynak koduna falan bakıyoruz. Cıks ekmek yok buradan. O zaman robots dosyasına bi göz gezdirelim.</p>
+
+<p><img src="/images/tr0ll/2.png" alt="" /></p>
+
+<p><img src="/images/tr0ll/3.png" alt="" /></p>
+
+<p>Buradan da ekmek yok bize. O zaman ftp ye anonymous olarak giriş yapalım.</p>
+
+<p><img src="/images/tr0ll/4.png" alt="" /></p>
+
+<p>Kullanıcı adı anonymous password anonymous olarak giriş yapabiliyoruz. ls komutu ile burada neler tutuluyor diye baktığımızda lol.pcap adında dosyayı görüyoruz. Dosyayı isterseniz get dosyaAdi şeklindede kendi makinenize çekebilirsiniz isterseniz browser üzerinden ftp://ıp-adresi diyerekten görüntüleyip indirirebilirsiniz.</p>
+
+<p><img src="/images/tr0ll/5.png" alt="" /></p>
+
+<p>Bildiğiniz gibi pcap dosyaları ağ trafiğini gösteren dosyalarıdır ve wireshark programı ile incelenebiliyor.</p>
 
 
                     
@@ -106,7 +160,7 @@
   <ul class="share-buttons">
     
     <li class="share-facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2017/04/TrollVulnhubWriteup" target="_blank" title="Share on Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2017/04/Tr0llVulnhubWriteup" target="_blank" title="Share on Facebook">
         <span class="fa-stack fa-lg">
           <i class="fa fa-square-o fa-stack-2x"></i>
           <i class="fa fa-facebook fa-stack-1x"></i>
@@ -117,7 +171,7 @@
 
     
     <li class="share-twitter">
-      <a href="https://twitter.com/intent/tweet?url=http://localhost:4000/2017/04/TrollVulnhubWriteup&text=Troll Vulnhub Writeup" target="_blank" title="Tweet">
+      <a href="https://twitter.com/intent/tweet?url=http://localhost:4000/2017/04/Tr0llVulnhubWriteup&text=Tr0ll Vulnhub Writeup" target="_blank" title="Tweet">
         <span class="fa-stack fa-lg">
           <i class="fa fa-square-o fa-stack-2x"></i>
           <i class="fa fa-twitter fa-stack-1x"></i>
@@ -128,7 +182,7 @@
 
     
     <li class="share-google-plus">
-      <a href="https://plus.google.com/share?url=http://localhost:4000/2017/04/TrollVulnhubWriteup" target="_blank" title="Share on Google Plus">
+      <a href="https://plus.google.com/share?url=http://localhost:4000/2017/04/Tr0llVulnhubWriteup" target="_blank" title="Share on Google Plus">
         <span class="fa-stack fa-lg">
           <i class="fa fa-square-o fa-stack-2x"></i>
           <i class="fa fa-google-plus fa-stack-1x"></i>
@@ -139,7 +193,7 @@
 
     
     <li class="share-linkedin">
-      <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2017/04/TrollVulnhubWriteup&title=Troll Vulnhub Writeup&summary=Troll Vulnhub Writeup&source=" target="_blank" title="Share on LinkedIn">
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2017/04/Tr0llVulnhubWriteup&title=Tr0ll Vulnhub Writeup&summary=Tr0ll Vulnhub Writeup&source=" target="_blank" title="Share on LinkedIn">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle-thin fa-stack-2x"></i>
           <i class="fa fa-linkedin fa-stack-1x"></i>
@@ -150,7 +204,7 @@
 
     
     <li class="share-pinterest">
-      <a href="http://pinterest.com/pin/create/button/?urlhttp://localhost:4000/2017/04/TrollVulnhubWriteup=&description=Troll Vulnhub Writeup" target="_blank" title="Pin it">
+      <a href="http://pinterest.com/pin/create/button/?urlhttp://localhost:4000/2017/04/Tr0llVulnhubWriteup=&description=Tr0ll Vulnhub Writeup" target="_blank" title="Pin it">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle-thin fa-stack-2x"></i>
           <i class="fa fa-pinterest fa-stack-1x"></i>
@@ -161,7 +215,7 @@
 
     
     <li class="share-envelope">
-      <a href="mailto:?&subject=Troll Vulnhub Writeup&body=Troll Vulnhub Writeup http://localhost:4000/2017/04/TrollVulnhubWriteup" target="_blank" title="Email">
+      <a href="mailto:?&subject=Tr0ll Vulnhub Writeup&body=Tr0ll Vulnhub Writeup http://localhost:4000/2017/04/Tr0llVulnhubWriteup" target="_blank" title="Email">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle-thin fa-stack-2x"></i>
           <i class="fa fa-envelope-o fa-stack-1x"></i>
@@ -184,7 +238,7 @@
   <h2>Recent Posts</h2>
   <ul>
     
-    <li><a href="/2017/04/TrollVulnhubWriteup">Troll Vulnhub Writeup</a></li>
+    <li><a href="/2017/04/Tr0llVulnhubWriteup">Tr0ll Vulnhub Writeup</a></li>
     
   </ul>
 </div>

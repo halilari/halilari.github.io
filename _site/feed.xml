@@ -7,29 +7,83 @@
 		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Troll Vulnhub Writeup</title>
-				<description>&lt;h1 id=&quot;troll-vulnhub&quot;&gt;Troll Vulnhub&lt;/h1&gt;
+				<title>Tr0ll Vulnhub Writeup</title>
+				<description>&lt;h1 id=&quot;tr0ll-vulnhub&quot;&gt;Tr0ll Vulnhub&lt;/h1&gt;
 
-&lt;p&gt;Bu yazı da sizlere Troll isimli zaafiyetli makinenin çözümünü anlatacağım.Öncelikle makineyi indirmek için;&lt;/p&gt;
+&lt;p&gt;Herkese merhabalar. Üniversite 1. sınıftan beri hep ertelediğim işi artık yapacağım! Yani Blog tutucam :) Elimden geldiğince faydalı olacağını düşündüğüm yazılar yazmaya çalışacağım. Umarım faydalı olur. O zaman başlayalım artık.&lt;/p&gt;
+
+&lt;p&gt;Bu yazı da sizlere Tr0ll isimli zaafiyetli makinenin çözümünü anlatacağım.Öncelikle makineyi indirmek için;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;https://www.vulnhub.com/entry/tr0ll-1,100/&quot;&gt;https://www.vulnhub.com/entry/tr0ll-1,100/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Makineyi sanal ortamda kurulumunu tamamlandıktan sonra&lt;/p&gt;
+&lt;p&gt;Makineyi sanal ortamda kurulumunu tamamlandıktan sonra zaafiyetli makinenin ıp adresini tespit edip işe koyuluyoruz.&lt;br /&gt;
+Benim kali makinemin ıp adresi 192.168.100.129..&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ netdiscover ya da netdiscover -r 192.168.1.0/24
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ netdiscover -r 192.168.100.0/24 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;diyerekten makinenin ıp adresini buluyoruz.Bende 192.168.1.41 olarak gözüküyor.Ip adresini de bulduğumuza göre bir nmap taraması atıp yolumuzu buluyoruz.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/netd.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;diyerekten makinenin ıp adresini buluyoruz.Bende 192.168.100.140 olarak gözüküyor.Ip adresini de bulduğumuza göre bir nmap taraması atıp yolumuzu buluyoruz.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/nmap.png&quot; alt=&quot;nmap&quot; /&gt;&lt;/p&gt;
 
+&lt;p&gt;nmap parametrelerini kısaca açıklayayım;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;-sS - - - &amp;gt; SYN Scan. SYN bayraklı paketler yollar. Varsayılan olarak kullanılır ve oldukça hızlıdır.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;-sV - - - &amp;gt; Hangi servisin çalışdığını bilmek yetmez versiyon bilgileride lazımdır.Çalışan servislerin versiyon bilgisini verir.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;-A - - - &amp;gt; Agresif tarama yapar. İşletim sistemi bilgisini , servis ve versiyon bilgilerini verir.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;-Pn - - -&amp;gt; Ping atmadan taramayı gerçekleştirir.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;-p- - - - &amp;gt; Tüm portarı tarar.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Çıktılara bakarsak;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1-) ftp servisi açık ve anonymous kullanıcılarına açık.&lt;br /&gt;
+2-) ssh servisi açık.&lt;br /&gt;
+3-) http servisi açık ve çoğu zaman karşılaştığımız robots.txt dosyası bulunuyor.(robots.txt dosyasına arama motorları tarafından indexlenmesini istemediğimiz url leri yazarız.)Ve secret url bulunuyor.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Öncelikle http servisinde neler bekliyor bizi bakıyoruz.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kaynak koduna falan bakıyoruz. Cıks ekmek yok buradan. O zaman robots dosyasına bi göz gezdirelim.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Buradan da ekmek yok bize. O zaman ftp ye anonymous olarak giriş yapalım.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kullanıcı adı anonymous password anonymous olarak giriş yapabiliyoruz. ls komutu ile burada neler tutuluyor diye baktığımızda lol.pcap adında dosyayı görüyoruz. Dosyayı isterseniz get dosyaAdi şeklindede kendi makinenize çekebilirsiniz isterseniz browser üzerinden ftp://ıp-adresi diyerekten görüntüleyip indirirebilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bildiğiniz gibi pcap dosyaları ağ trafiğini gösteren dosyalarıdır ve wireshark programı ile incelenebiliyor.&lt;/p&gt;
+
 </description>
 				<pubDate>Tue, 11 Apr 2017 00:00:00 +0300</pubDate>
-				<link>http://localhost:4000/2017/04/TrollVulnhubWriteup</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/04/TrollVulnhubWriteup</guid>
+				<link>http://localhost:4000/2017/04/Tr0llVulnhubWriteup</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/04/Tr0llVulnhubWriteup</guid>
 			</item>
 		
 	</channel>
