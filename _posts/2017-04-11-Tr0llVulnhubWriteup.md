@@ -6,7 +6,7 @@ share: true
 description: Tr0ll Vulnhub Writeup
 tags:
  - vm
-comments: false
+comments: true
 ---
 
 # Tr0ll Vulnhub
