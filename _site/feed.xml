@@ -29,9 +29,10 @@ Benim kali makinemin ıp adresi 192.168.100.129.&lt;/p&gt;
 
 &lt;p&gt;diyerekten makinenin ıp adresini buluyoruz.Bende 192.168.100.140 olarak gözüküyor. Ip adresini de bulduğumuza göre bir nmap taraması atıp yolumuzu buluyoruz.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/nmap.png&quot; alt=&quot;nmap&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/tr0ll/nmap.png&quot; alt=&quot;nmap&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;nmap parametrelerini kısaca açıklayayım;&lt;/p&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;-sS - - - &amp;gt; SYN Scan. SYN bayraklı paketler yollar. Varsayılan olarak kullanılır ve oldukça hızlıdır.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -104,7 +105,7 @@ Benim kali makinemin ıp adresi 192.168.100.129.&lt;/p&gt;
 
 &lt;p&gt;Makineyi hazırlayan arkadaşları tebrik ediyorum. Makine isminin hakkını veriyor abi. Tam troller…&lt;/p&gt;
 
-&lt;p&gt;Neyse hydra ile brute force yaptıktan sonra bakıyoruz ve BİNGO …&lt;/p&gt;
+&lt;p&gt;Neyse hydra ile brute force yaptıktan sonra bakıyoruz ve BİNGO!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/tr0ll/12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 

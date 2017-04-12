@@ -26,9 +26,10 @@ Benim kali makinemin ıp adresi 192.168.100.129.
 	
 diyerekten makinenin ıp adresini buluyoruz.Bende 192.168.100.140 olarak gözüküyor. Ip adresini de bulduğumuza göre bir nmap taraması atıp yolumuzu buluyoruz.
 
-![nmap](/images/nmap.png)
+![nmap](/images/tr0ll/nmap.png)
 
 nmap parametrelerini kısaca açıklayayım;
+
 >-sS - - - > SYN Scan. SYN bayraklı paketler yollar. Varsayılan olarak kullanılır ve oldukça hızlıdır.
 
 >-sV - - - > Hangi servisin çalıştığını bilmek yetmez versiyon bilgileride lazımdır.Çalışan servislerin versiyon bilgisini verir.
@@ -89,7 +90,7 @@ Fakat denedim denedim olmadı işe yaramıyordu. Bu böyle olmazdı ve kopya çe
 
 Makineyi hazırlayan arkadaşları tebrik ediyorum. Makine isminin hakkını veriyor abi. Tam troller...
 
-Neyse hydra ile brute force yaptıktan sonra bakıyoruz ve BİNGO ...
+Neyse hydra ile brute force yaptıktan sonra bakıyoruz ve BİNGO!
 
 ![](/images/tr0ll/12.png)
 
@@ -138,15 +139,6 @@ Ve exploiti çalıştırdığımda artık rootum.
 Artık root klasörüne gidebiliriz. Burada dikkatimizi proof.txt dosyası çekiyor . Zaten makinede okumamız istenen dosya bu. Ve Dosyayı okuduğumuzda Mission Complete...
 
 ![](/images/tr0ll/18.png)
-
-
-
-
-
-
-
-
-
 
 
 
