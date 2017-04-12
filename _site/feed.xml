@@ -7,6 +7,15 @@
 		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Mr.Robot Vulnhub Writeup</title>
+				<description>&lt;p&gt;askjhdsjak&lt;/p&gt;
+</description>
+				<pubDate>Tue, 11 Apr 2017 00:00:00 +0300</pubDate>
+				<link>http://localhost:4000/2017/04/MrRobotVulnhubWriteup</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/04/MrRobotVulnhubWriteup</guid>
+			</item>
+		
+			<item>
 				<title>Tr0ll Vulnhub Writeup</title>
 				<description>&lt;h1 id=&quot;tr0ll-vulnhub&quot;&gt;Tr0ll Vulnhub&lt;/h1&gt;
 
