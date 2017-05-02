@@ -62,7 +62,7 @@ h1 {
 
 </script>
 
-<div class="contain">
+<div class="contain col-md-8">
   
   <div class="fancy-terminal">
     <p>$whoami:</p>

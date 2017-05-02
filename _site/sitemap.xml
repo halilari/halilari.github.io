@@ -5,6 +5,10 @@
 <lastmod>2017-04-11T00:00:00+03:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/2017/05/MetasploitEternalBlueDoublePulsar</loc>
+<lastmod>2017-05-02T00:00:00+03:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about</loc>
 </url>
 <url>
@@ -18,6 +22,15 @@
 </url>
 <url>
 <loc>http://localhost:4000/tag/vm/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tag/doublepulsar/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tag/shadow%20brokers/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tag/metasploit/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/tag/analytics/index.html</loc>
