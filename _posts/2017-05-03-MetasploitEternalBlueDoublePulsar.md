@@ -6,7 +6,7 @@ share: true
 description: Metasploit Framework EternalBlue&Double Pulsar
 tags:
  - doublepulsar
- - shadow brokers
+ - shadowbrokers
  - metasploit
 comments: true
 ---
